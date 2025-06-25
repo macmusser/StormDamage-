@@ -1,6 +1,124 @@
-git clone https://github.com/yourusername/roof-inspection-landing.git
-cd roof-inspection-landing
-# Add your index.html file here
-git add index.html
-git commit -m "Add landing page"
-git push
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Roof Inspection - Storm Damage Help</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #004466;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero {
+      padding: 2rem;
+      background-color: #e9f5ff;
+      text-align: center;
+    }
+    .hero h2 {
+      margin-top: 0;
+    }
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #004466;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>[Your Logo]</h1>
+    <p>Worried About Storm Damage? We've Got You Covered.</p>
+  </header>
+
+  <div class="hero">
+    <h2>Free Roof Inspections in Your Area</h2>
+    <p>Recent storms brought 1–2" hail and 80+ MPH winds. Your roof could be damaged—get it checked for FREE!</p>
+    <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Book My Free Inspection</button>
+  </div>
+
+  <div class="section">
+    <h3>What We Do</h3>
+    <ul>
+      <li>✔ Roof Repairs & Replacements</li>
+      <li>✔ Free Storm Damage Inspections</li>
+      <li>✔ Help with Insurance Claims</li>
+      <li>✔ Fast, Local Service</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Contact a Sales Rep</h3>
+    <div class="contact-form" id="contact">
+      <form action="https://formspree.io/f/xnnvojbe" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="contact-method">Preferred Contact Method</label>
+        <select id="contact-method" name="contact-method">
+          <option value="phone">Phone</option>
+          <option value="email">Email</option>
+          <option value="text">Text</option>
+        </select>
+
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message"></textarea>
+
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+
+        <button type="submit" class="cta-button">Schedule Now</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>📞 [Phone Number] | 🌐 [Website] | 📧 [Email Address]</p>
+    <p>📍 [Business Address] | 🔒 100% Privacy Guaranteed</p>
+  </footer>
+</body>
+</html>
